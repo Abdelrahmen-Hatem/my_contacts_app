@@ -14,6 +14,7 @@ class startSocialMedia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       backgroundColor: const Color.fromARGB(255, 3, 7, 30),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
@@ -22,7 +23,7 @@ class startSocialMedia extends StatelessWidget {
             onPressed: () {
               launchUrl(Uri.parse(socialMediaLinks),mode: LaunchMode.externalApplication);
         } ,
-             child: Text("start Social Media Here")),
+             child: Text("start Social Media Here"),style: ButtonStyle(backgroundColor:WidgetStatePropertyAll(Colors.orange),textStyle: WidgetStatePropertyAll(TextStyle(color: Colors.white)) ),),
       ),
     );
   }
