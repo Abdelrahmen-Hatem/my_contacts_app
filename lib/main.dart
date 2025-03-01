@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_contact_app/start.dart';
 import 'my_contacts.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyContacts(),
+      home: startSocialMedia(socialMediaLinks: 'https://github.com/Abdelrahmen-Hatem',),
 
     );
   }
