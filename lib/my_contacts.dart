@@ -14,6 +14,14 @@ class MyContacts extends StatelessWidget {
     'twitter.png': 'https://x.com/abdelravman',
     'github.png': 'https://github.com/Abdelrahmen-Hatem',
   };
+  Map<String, String> socialMediaN = {
+    'facebook.png': 'facebook',
+    'whatsapp.png': 'whatsapp.png',
+    'instagram.png': 'instagram',
+    'telegram.png': 'telegram',
+    'twitter.png': 'twitter',
+    'github.png': 'github',
+  };
   @override
   Widget build(BuildContext mycontext) {
     return Scaffold(

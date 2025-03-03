@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_contact_app/start.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // ignore: must_be_immutable
 class SocialMediaIcon extends StatelessWidget {
@@ -23,11 +23,19 @@ class SocialMediaIcon extends StatelessWidget {
           radius: 40,
         ),
         onTap:() {
-          Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => startSocialMedia(socialMediaLinks: socialMediaLinks,)),
-  );
+          showBottomSheet(
+            context: context,
+             builder: (context){
+              return ElevatedButton(
+              
+                style: ButtonStyle(backgroundColor:WidgetStatePropertyAll(Colors.black),textStyle: WidgetStatePropertyAll(TextStyle(color: Colors.white))),
+            onPressed: () {
+              launchUrl(Uri.parse(socialMediaLinks),mode: LaunchMode.externalApplication);
         } ,
+             child: Text("start $SocialMedia"),
+);
+});
+        },
       ),
     );
   }

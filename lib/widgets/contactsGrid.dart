@@ -13,6 +13,7 @@ class ContactsGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       itemCount: socialMedia.length ,
+      
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
       ),
