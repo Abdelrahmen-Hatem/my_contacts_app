@@ -32,7 +32,7 @@ class SocialMediaIcon extends StatelessWidget {
             onPressed: () {
               launchUrl(Uri.parse(socialMediaLinks),mode: LaunchMode.externalApplication);
         } ,
-             child: Text("start $SocialMedia"),
+             child: Text("Open $SocialMedia"),
 );
 });
         },
