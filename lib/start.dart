@@ -5,7 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 // ignore: must_be_immutable
 class startSocialMedia extends StatelessWidget {
   String socialMediaLinks;
-  
+
   startSocialMedia({
     Key? key,
     required this.socialMediaLinks,
@@ -14,16 +14,22 @@ class startSocialMedia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       backgroundColor: const Color.fromARGB(255, 3, 7, 30),
+      backgroundColor: const Color.fromARGB(255, 3, 7, 30),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
       body: Center(
         child: ElevatedButton(
-            onPressed: () {
-              launchUrl(Uri.parse(socialMediaLinks),mode: LaunchMode.externalApplication);
-        } ,
-             child: Text("start Social Media Here"),style: ButtonStyle(backgroundColor:WidgetStatePropertyAll(Colors.orange),textStyle: WidgetStatePropertyAll(TextStyle(color: Colors.white)) ),),
+          onPressed: () {
+            launchUrl(Uri.parse(socialMediaLinks),
+                mode: LaunchMode.externalApplication);
+          },
+          child: Text("start Social Media Here"),
+          style: ButtonStyle(
+              backgroundColor: WidgetStatePropertyAll(Colors.orange),
+              textStyle:
+                  WidgetStatePropertyAll(TextStyle(color: Colors.white))),
+        ),
       ),
     );
   }

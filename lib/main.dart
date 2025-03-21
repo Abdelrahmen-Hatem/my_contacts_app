@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_contact_app/provider.dart';
+import 'package:provider/provider.dart';
 import 'my_contacts.dart';
 
 void main() {
@@ -9,10 +11,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MyContacts(),
-
+    return ChangeNotifierProvider(
+      create: (context) => myProvider(),
+      child: MaterialApp(
+        
+        debugShowCheckedModeBanner: false,
+        home: MyContacts(),
+      
+      ),
     );
   }
 }
